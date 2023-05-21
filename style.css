@@ -1,0 +1,53 @@
+body {
+    background-image: url(./image/IMG_20221011_231918_976.jpg);
+    background-attachment: fixed;
+}
+
+h1 {
+    margin-left: 50px;
+    color: #AA336A;
+}
+
+.container {
+    border: 6px solid purple;
+    border-radius: 5px;
+    width: 30%;
+    /* width: 30% */
+    margin: auto;
+    position: relative;
+    top: 90px;
+    padding: 50px;
+}
+
+.generateBtn {
+    margin-bottom: 20px;
+    background-color: #4B0076;
+    font-weight: bolder;
+    margin-left: 50px;
+    width: 70%;
+    padding: 10px;
+}
+
+.generateBtn:hover {
+    background: linear-gradient(to right,#6617CB, #CB218E);
+    box-shadow: 0.5px 0.5px black;
+}
+
+.user-container{
+    display: flex;
+    gap: 30px;
+}
+
+.user-container img {
+    border-radius: 50%;
+}
+
+p {
+    color: #AA336A;
+}
+
+span {
+    font-weight: 900;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: purple;
+}
