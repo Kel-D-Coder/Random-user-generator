@@ -1,9 +1,13 @@
 const Btn = document.querySelector('button')
 
 function fetchUser() {
-    document.cookie = "SameSite = None"
     fetch('https://randomuser.me/api/')
-    .then((res) => res.json())
+        .then((res) => {
+            if (res.status !== 200) {
+            throw "No internet connection"
+        }
+        return res.json()
+    })
     .then((data) => {
         document.querySelector('.container').innerHTML = `
         <div>
@@ -26,8 +30,8 @@ function fetchUser() {
         </div>
         `
     })
-        .catch(() => {
-        document.querySelector('h1').textContent = 'No internet connection'
+        .catch((error) => {
+        document.querySelector('h1').textContent = "No internet connection"
     })
 }
 
